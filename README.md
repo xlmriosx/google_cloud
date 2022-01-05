@@ -39,11 +39,14 @@ Maglev Load Balancers: They are Global Load Balancers. They balance the load to 
 #### Titan: Low-power, secure microcontroller designed with Google's hardware security requirements and scenarios in mind.
 #### Cloud TPUs: Chip designed to accelerate machine learning workloads with TensorFlow.
 
-### Water Pipes: Cold water that runs from the cooling plant to the data center, where it is used to extract heat from inside the hot huts. The warm water is then returned to the cooling plant where residual heat is removed and the water returns to the data center.
+### Water Pipes: 
+Cold water that runs from the cooling plant to the data center, where it is used to extract heat from inside the hot huts. The warm water is then returned to the cooling plant where residual heat is removed and the water returns to the data center.
 
-### HotHut: Custom cooling systems for Google server racks. They serve as temporary homes for the hot air that comes out of our servers, isolating it from the rest of the data center floor.
+### HotHut: 
+Custom cooling systems for Google server racks. They serve as temporary homes for the hot air that comes out of our servers, isolating it from the rest of the data center floor.
 
-### Cooling Plant: In Google's data centers, the “free cooling” provided by the climate through a water system is used. That is, the cooling plant receives hot water from the data center and cold water from the cooling towers, the heat is transferred from hot water to cold water. The chilled water returns to the data center floor to extract more heat from the equipment there, and the hot water flows into the cooling towers to be cooled.
+### Cooling Plant: 
+In Google's data centers, the “free cooling” provided by the climate through a water system is used. That is, the cooling plant receives hot water from the data center and cold water from the cooling towers, the heat is transferred from hot water to cold water. The chilled water returns to the data center floor to extract more heat from the equipment there, and the hot water flows into the cooling towers to be cooled.
 
 ## The transformational cloud:
 
