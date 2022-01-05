@@ -12,12 +12,45 @@ Google Cloud Platform offers us tools that we can divide into 3 groups, accordin
 
 ## Cloud computing features:
 
-Self-service and on-demand computation.
+·Self-service and on-demand computation.
 
-Connected to the network (you can access from anywhere).
+·Connected to the network (you can access from anywhere).
 
-Economies of scale (The provider shares resources among all customers).
+·Economies of scale (The provider shares resources among all customers).
 
-Elasticity (the client can obtain resources or decrease them as required very quickly).
+·Elasticity (the client can obtain resources or decrease them as required very quickly).
 
-Metered service (you pay what you consume).
+·Metered service (you pay what you consume).
+
+# Data centers
+
+Info: https://cloud.withgoogle.com/infrastructure/explore/step-1
+
+## Parts of data center
+
+Networking Room: Here the Jupiter clusters are connected with the rest of Google Cloud through the Google backbone network.
+
+Jupiter Network Equipment: Equipment (software and hardware) developed by Google, to connect all the servers in the data centers, so that they are almost one.
+
+Maglev Load Balancers: They are Global Load Balancers. They balance the load to Google Compute Engine, so that it can serve a million requests per second without pre-warming.
+
+### Custom Chips:
+
+#### Titan: Low-power, secure microcontroller designed with Google's hardware security requirements and scenarios in mind.
+#### Cloud TPUs: Chip designed to accelerate machine learning workloads with TensorFlow.
+
+### Water Pipes: Cold water that runs from the cooling plant to the data center, where it is used to extract heat from inside the hot huts. The warm water is then returned to the cooling plant where residual heat is removed and the water returns to the data center.
+
+### HotHut: Custom cooling systems for Google server racks. They serve as temporary homes for the hot air that comes out of our servers, isolating it from the rest of the data center floor.
+
+### Cooling Plant: In Google's data centers, the “free cooling” provided by the climate through a water system is used. That is, the cooling plant receives hot water from the data center and cold water from the cooling towers, the heat is transferred from hot water to cold water. The chilled water returns to the data center floor to extract more heat from the equipment there, and the hot water flows into the cooling towers to be cooled.
+
+## The transformational cloud:
+
+·The cleanest cloud/Sustainability.
+
+·Saves you money.
+
+·Easy to use and self-optimizing.
+
+·Custom industry solutions.
