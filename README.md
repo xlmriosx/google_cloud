@@ -50,6 +50,8 @@ In Google's data centers, the “free cooling” provided by the climate through
 
 ## The transformational cloud:
 
+### First part
+
 ·The cleanest cloud/Sustainability.
 
 ·Saves you money.
@@ -57,3 +59,11 @@ In Google's data centers, the “free cooling” provided by the climate through
 ·Easy to use and self-optimizing.
 
 ·Custom industry solutions.
+
+### Second part
+
+·Era of virtual machines (VM): The cloud begins, startups realize that it is not necessary to buy all the infrastructure, which until then was necessary and that they could take advantage of the "cloud"
+
+·Age of Cloud Infrastructure: Many Traditional Businesses Realize the Potential of the Cloud.
+
+
