@@ -67,3 +67,51 @@ In Google's data centers, the “free cooling” provided by the climate through
 ·Age of Cloud Infrastructure: Many Traditional Businesses Realize the Potential of the Cloud.
 
 
+## Architectures on GCP
+
+### Computing options
+
+#### Compute Engine
+
+·Virtual Machines
+
+·Bear Metal (full servers by special licensing tea)
+
+#### GKE
+
+·Kubernetes Engine
+
+·How to orchestrate different types of containers
+
+#### App Engine (Serverless Platform)
+
+To run web applications
+
+Zero server administration
+
+#### Cloud run
+
+Serverless containers
+
+#### Cloud Function
+
+·Serverless function
+
+#### Firebase
+
+·Front-end PaaS and mobile development
+
+·It is known as Back-end as a Service
+
+### Serverless computing
+
+Info: https://cloud.google.com/serverless
+
+Develop, deploy and scale applications quickly and safely in a fully managed environment
+
+·Auto-scaling
+
+·Fully managed
+
+·Speed to Market
+
