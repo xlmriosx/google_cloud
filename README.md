@@ -569,4 +569,28 @@ GCloud: https://cloud.google.com/sdk/docs/install
 3. After installing it, they initialize it with the command:
 `gcloud init`
 
+## Market place
 
+Advantages
+
+·Easy installation, save time.
+
+·A single invoice is received from Google, even if the services are from third parties.
+
+### It's an AppStore
+
+·Is specialized in business software
+
+·Shopping platform
+
+### Marketplace Advantages
+
+·It is easy to install
+
+·One single invoice from Google
+
+### How the MarketPlace works
+
+·Has a large selection of software
+
+·It is quoted through the list price or private negotiations (the client's price and its confidentiality are respected)
