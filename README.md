@@ -535,36 +535,30 @@ In addition to that they inherit the policy of the superior nodes.
 The structure is assigned to someone user and a folder.
 
 `{
- "bindings": [
- 
- {
- 	"role": "roles/storage.objectAdmin",
-  
-	"members": [
-  
-		"user:alice@acme.com",
-    
- 		"serviceAccount:my-other-app@appspot.gserviceaccount.com",
-    
- 		"group:admins@acme.com",
-    
- 		"domain:acme.com" ]
-    
- },
- 
- {
- 
- 	"role": "roles/storage.objectViewer",	# rol
-  
- 	"members": ["user:bob@acme.com"]	# who we assign role
-  
- }
- 
- ]
- 
+	"bindings": [                                                                                                                          
+ 		{  
+ 		"role": "roles/storage.objectAdmin",  
+  		"members": [  
+			"user:alice@acme.com",  
+			"serviceAccount:my-other-app@appspot.gserviceaccount.com",      
+			"group:admins@acme.com",      
+			"domain:acme.com" ]
+		},
+		{
+		"role": "roles/storage.objectViewer",	# rol
+		"members": ["user:bob@acme.com"]	# who we assign role }
+		]
 }`
 
-## Interact with CLI
+## GCP interacts through API
+
+You can interact with GCP through 3 methods:
+
+1. The web App
+2. The mobile App
+3. The CLI for the terminal
+
+### Interact with CLI
 
 In order to interact with the CLI from your local computer, you must install the GCloud application, which you can find here[here](https://cloud.google.com/sdk/docs/install), the steps are:
 
