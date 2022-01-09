@@ -594,3 +594,174 @@ Advantages
 ·Has a large selection of software
 
 ·It is quoted through the list price or private negotiations (the client's price and its confidentiality are respected)
+
+# Google Cloud Storage
+
+It is an object storage service, an object is an immutable piece of data identified by an object name.
+A bucket is a container for objects.
+
+Calculator: https://cloud.google.com/products/calculator 
+
+### Main features
+
+·Unified experience
+·Consistent carbonated listing
+·Geo - redundant
+·Scalable to exabytes
+
+## Cloud Storage uses
+
+·Content storage and delivery: Images or videos.
+·Computing, analytics and ML: Large volumes of information and using the Cloud
+Dataproc to analyze that information.
+·Backups and archiving: Backups of databases, virtual machines, information systems, etc.
+
+## Typical structure
+
+Objects are associated with Buckets. Buckets are related to projects and projects are associated with an Organization.
+
+## Security
+
+·We can manage access to objects within Cloud Storage.
+·100% of the objects in Cloud Storage are encrypted all the time; both at rest and in motion.
+·Retention capacity; the amount of time we guarantee storing an object.
+·Version control, like git, we can "rewrite" the objects with the new version of them and keep the history of each change.
+
+## Encryption
+
+Flexible control when encrypting data.
+
+·Default: Google manages the keys transparently.
+·Customer-managed (CMEK): You manage your keys in Google Cloud KMS.
+·Customer-supplied (CSEK): Store your keys outside of Google Cloud.
+
+## Use Cloud Storage
+
+We can develop our tools to interact with Cloud Storage.
+
+·From our programs.
+·Build our libraries.
+·Refuse the libraries that Google offers us.
+
+### Tools that already exist to use Cloud Storage:
+
+·Cloud Console
+·gsutil
+
+## Create a bucket
+
+with gsutil:
+
+It is suggested to put the Bucket that is associated with the project, so that it is easy to locate. The name of the Bucket must be unique.
+
+·Create a Bucket(`make Bucket`)
+`gsutil mb gs://my-project-bucket-01`
+
+·See my busckets
+`gsutil ls`
+
+·See objects in a bucket
+`gsutil ls gs://my-project-bucket-01`
+
+·Copy objects to a Bucket
+`gsutil cp ./file.txt gs://my-project-bucket-01`
+
+·Copy objects of a Bucket to other site
+`gsutil cp gs://my-project-bucket-01/file.txt`
+
+·Activate control version in objects of a Bucket
+`gsutil versioning set on gs://my-project-bucket-01`
+
+·Deactivate control version in objects of a Bucket
+`gsutil versioning set off gs://my-project-bucket-01`
+
+## Cloud Storage storage classes
+
+When creating a Bucket we must define the location and class.
+
+### Location
+
+Define where our data will reside.
+
+#### Location types
+
+1. Regional: The data is replicated in the zones of a single region. For frequently accessed data within a region.
+2. Dual-regional: The data is replicated in nearby regions. For availability of frequently accessed data in a specific area.
+3. Multi-regional: The data is replicated in different regions (continents). For the highest availability of frequently accessed data.
+
+## Classes
+
+They refer to the frequency with which we access and the availability we want on the objects within the bucket. Besides the price.
+
+1. Standards: Objects that we access frequently (more expensive).
+2. Nearline: Access to objects once a month.
+3. Coldline: Access to objects once a quarter.
+4. Archive: Access to objects once a year.
+
+## Classes vs. Location
+
+We can combine classes with different locations, according to our needs.
+
+## Create a bucket
+
+1. Select the Cloud Storage option from the hamburger menu.
+2. Click on "Create Bucket".
+3. Give a unique name to the "bucket" (you can prefix the name of the project) and Continue.
+4. Select where it will be stored (Multi-Region, Dual Region or Region) and Continue.
+5. Select the storage class (Standard, Nearline, Coldline, Archive) and Continue.
+6. Select access control (Uniform, Fine-grained) and Continue.
+7. Choose the Advanced Configuration you need (Encryption, retention policy, etc.).
+8. Click on the CREATE button.
+
+### Create a bucket Standar on console
+
+We created a Standard Multi-region Bucket in the US. Access to the public was provided and uniform access was chosen. Finally we select a retention of 10 years. This in gsutil would look like this:
+
+`gsutil mb -c standard -l us --pap enforced -b on --retention 10y gs://gemb-platzi-storage-bucket-01`
+
+Where:
+
+-c is the class
+
+-l is the type of location we want
+
+--pap specifies public access
+
+-b is to enable uniform access
+
+Advanced:
+
+--retention is the retention period of the resource.
+
+## Google Cloud Bigtable
+
+Cloud Bigtable is Google's NoSQL Big Data database service, fully managed at the patabyte scale for use cases where low-latency random data access, scalability, and reliability are critical.
+
+When to use SQL: When you already know the number of users you are going to have and you are not going to have accelerated growth, you plan to grow.
+
+When to use NoSQL: When the database is very large, the peaks are very high and the growth is very accelerated.
+
+Cloud Bigtable is a NoSQL database service that advances to Petabytes if necessary
+
+### Features
+
+·High processing
+
+·Low latency processing
+
+·Very large amounts of data
+
+·Resize without downtime
+
+·Flexible and automated replication
+
+·Google Search, Maps and other Google products
+
+### How do we interact with the Cloud Big Table?
+
+·Application api: We can read and write data through a service layer called network Hbase, which is an open code manager that helps us expose the point provided by these operations of writing, reading, updating and deleting and this is normally used to send data to applications or dashboards
+
+·Streaming / Transmission: Datflow Streaming, Saprk Streaming and Apache Storm
+
+·Batch Processing: Data can be read and written to Big Table in batch form (large quantities) this can be done through hadoop, Datflow, Apache Spark.
+
