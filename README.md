@@ -765,3 +765,138 @@ Cloud Bigtable is a NoSQL database service that advances to Petabytes if necessa
 
 ·Batch Processing: Data can be read and written to Big Table in batch form (large quantities) this can be done through hadoop, Datflow, Apache Spark.
 
+### Google Cloud Bigtable in action
+
+In this class we create a Bigtable instance with the name `quick-start-instance`, id `quick-start-instance` and cluster `id quickstart-instance-c1`. The drive type was single node SSD. Finally the region was `us-east1` and the zone `us-east1-c`.
+
+From the CLI we can create our instance using the `cbt` tool, the command to create the instance of this class would look like this: 
+
+`cbt createinstance quick-start-instance "quick-start-instance" quickstart-instance-c1 us-east1-c 1 SSD`
+
+Where:
+
+·`quick-start-instance` it´s id
+·`"quick-start-instance"` ït´s name
+·`quickstart-instance-c1` it´s id of cluster
+·`us-east1-c` it´s region
+·`1` number of nodes
+·`SSD` type of disk
+
+### Steps of Google Cloud Bigtable
+
+Commands steps: 
+
+o We associate our instance to my cloud Shell profile to send command and to which database
+• `Echo Project = 'gcloud config get-value project'> ~ / .cbtrc`
+• `Echo instance = instancename >> ~ / .cbtrc`
+
+o We create a table
+• `Cbt createtable my-table`
+
+o We authorize the Shell to interact with the api
+• `Cbt ls`
+
+o Let's add a column family or add columns
+• `Cbt createfamily my-table cf1 // family name1`
+• `Cbt ls my-table`
+
+o We enter data in the table
+• `cbt set my-table r1 cf1: c1 = test-value`
+• `cbt read my-table`
+
+## Cloud SQL
+
+This is the managed Relational Database service. It can be MySQL, PosgreSQL and SLQ Server.
+
+If you need more performance, it can be scaled vertically (a more powerful machine).
+If more availability is required, a two-zone architecture can be chosen.
+
+### Features
+
+· Fully managed
+
+· An integrated solution: They can be accessed from anywhere.
+
+· Reliable: It is easy to configure replicas, backups and activate the Failover process (replace an instance when it fails).
+
+· Easy Migrations to CloudSQL: Database Migration Service helps to migrate DBs on premise to the Cloud easily.
+
+In this type of database we carry out transactions and they must comply with ACID principles.
+
+·Atomicity: Ensures that all operations carried out in a transaction, and otherwise that it is possible to return to the previous state (rollback).
+
+·Consistency: Ensures that all transactions are successful, the data must make sense.
+
+·Isolation: It dictates that the operations are isolated and transparent, that is, multiple operations occur independently and without being affected.
+
+·Durabilty: It ensures that the result of an operation remains even when there was an error.
+
+## Cloud spanner in action
+
+### Features.
+
+·Relational database designed for any scale
+
+·Availability five 9 (99.999%)
+
+·Automatic fragmentation.
+
+### Create instance from gcloud CLI
+
+In this class we create a Cloud Spanner instance named `example-db`, regional and in central US. Besides that we occupy only 1 node.
+
+To create said instance using `gcloud` we use the following command:
+
+`gcloud spanner instances create example-db --config=regional-us-central1 --nodes=1`
+
+### Create database from gcloud CLI
+
+To create a database called `example-db-db` in our `example-db` instance we use the command:
+
+`gcloud spanner databases create example-db-db --instance=example-db`
+
+### Create a schema from gcloud CLI
+
+`cloud spanner databases ddl update example-db-db \
+--instance=example-db \ 
+		--ddl='CREATE TABLE Singers ( 
+				SingerId INT64 NOT NULL, 
+				FirstName STRING(1024), 
+				LastName STRING(1024), 
+				SingerInfo BYTES(MAX) 
+				) PRIMARY KEY (SingerId)'`
+				
+### Insert data to our DB from gcloud CLI
+
+To insert a single record:
+
+`gcloud spanner rows insert --database=example-db-db \  
+--instance=example-db \
+--table=Singers \  
+--data=SingerId=1,FirstName=Marc,LastName=Richards`
+
+### Update data in our DB with gcloud CLI
+
+To update a single record:
+
+`gcloud spanner rows update --table=Singers --database=example-db-db --instance=example-db \ 
+--data=SingerId=1,SingerName=Will`
+
+### Delete data in our DB with gcloud CLI
+
+To delete a single record: 
+
+`gcloud spanner rows delete --table=Singers --database=example-db-db \ 
+--instance=example-db --keys=1`
+
+### Reed data from SQL
+
+To query our records:
+
+`gcloud spanner databases execute-sql example-db-db \ 
+--instance=example-db \
+--sql='SELECT * FROM Singers'`
+
+![image](https://user-images.githubusercontent.com/78567418/149233133-f1b6419f-c278-4ccd-a4ae-dc133d361d17.png)
+
+
