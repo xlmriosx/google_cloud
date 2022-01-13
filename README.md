@@ -990,9 +990,25 @@ You can upload photos and save them in the cloud, so that later you can search f
 
 ![source](https://user-images.githubusercontent.com/78567418/149415908-5c70ca42-7334-4868-9dcb-a51f1c8c4fa7.gif)
 
+## First steps
+
+1. Go Console.
+2. Search Manager Resources.
+3. Create a project.
+4. Select Project.
+5. Go home.
+
 ## Cloud storage
 
-
+1. Search Cloud Storage.
+2. Select Create bucket.
+3. In storage class select Standard.
+4. Go browser storage.
+5. Select bucket created.
+6. Go permissions.
+7. Delete public access.
+8. Create a user like all-user.
+9. Define to all-user permission to only read/view.
 
 
  
