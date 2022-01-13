@@ -968,5 +968,31 @@ When we import document this apper on Firestore Data.
 
 ![image](https://user-images.githubusercontent.com/78567418/149354427-d0d0d487-c03b-476e-a04a-efac8ba88ffd.png)
 
+## Google belives
+
+Google believes that in the future all companies regardless of their size or sector will differentiate themselves from their competitors through technology, mostly in the form of software. And the best software is all about data. Thus, each one will become a data company, if it is not already.
+
+# Project Google Photos
+
+Our Google Photos Clone project will have the 3 essential functionalities of this famous app:
+
+1. Store the photographs so that they are safeguarded.
+2. Recognize what is inside a photo.
+3. Being able to find photos through natural language searches.
+
+What I want to tell you with this is that if you take photos of anything with your cell phone, that photo will be saved in the cloud. And to find it, you just have to write in a search engine some word (s) that describe what is in the photo.
+
+To create this you will not need to code the application. The code, written in Python with Flask, I will share it with you within the classes in a GitHub repository. What we will do in this series of courses is to create the base infrastructure to run this app from the cloud with the essential characteristics mentioned.
+
+![image](https://user-images.githubusercontent.com/78567418/149415740-0c5fafb7-c687-4700-8aef-e03801f988a0.png)
+
+You can upload photos and save them in the cloud, so that later you can search for them with a single word in English using cloud storage technologies and artificial intelligence such as computer vision and natural language processing.
+
+![source](https://user-images.githubusercontent.com/78567418/149415908-5c70ca42-7334-4868-9dcb-a51f1c8c4fa7.gif)
+
+## Cloud storage
+
+
+
 
  
