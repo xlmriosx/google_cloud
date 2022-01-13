@@ -899,4 +899,74 @@ To query our records:
 
 ![image](https://user-images.githubusercontent.com/78567418/149233133-f1b6419f-c278-4ccd-a4ae-dc133d361d17.png)
 
+## Firestore
 
+BigTable is a NoSQL Database of type Key-Value (key-value), while Cloud Firestore is a NoSQL Database of documents
+
+** Document ** = Set of data associated with the same concept
+Example: Product, Note, Player.
+
+Collection: Set of documents.
+
+### Cloud Firestore
+
+·Serverless
+
+·Real time
+
+·Offline support
+
+#### Characteristics:
+
+·Scalable
+
+·Trustworthy
+
+·Flexible
+
+·Available
+
+·Transactional
+
+#### Some use cases can be:
+
+·User profile management
+
+·Real time inventories
+
+·State changes
+
+·Data synchronization
+
+## Firestore in action
+
+In this class we create an instance of Firestore in Native Mode, located in us-east4.
+
+Using the following command we can create a Google Cloud Firestore Native database:
+
+`gcloud firestore databases create --region=us-east4`
+
+To create a document csv:
+
+`node TestDocument 5`
+
+Where:
+
+·node: references to document
+
+·TesteDocument: references to name's document
+
+·5: references number of document for create
+
+To use document:
+
+`node importTestDocument "name of csv created"`
+
+When we import document this apper on Firestore Data.
+
+## Comparative of different types of storage
+
+![image](https://user-images.githubusercontent.com/78567418/149354427-d0d0d487-c03b-476e-a04a-efac8ba88ffd.png)
+
+
+ 
