@@ -1010,5 +1010,76 @@ You can upload photos and save them in the cloud, so that later you can search f
 8. Create a user like all-user.
 9. Define to all-user permission to only read/view.
 
+# Virtual Private Cloud(VPC)
 
- 
+It is a way of establishing connectivity between the resources we have in the cloud.
+
+Virtual, isolated and private network environment that is based on the concept of a software-defined network.
+
+There is a private global network (has global reach). In other words, it allows us to connect all our resources to the VPC regardless of the region they are in.
+
+## Subnets
+
+VPCs are made up of subnets. A VPC must have at least one subnet.
+
+Subnets are regional in scope. That is, we can connect resources that are in different zones of a region using the subnet.
+
+Subnets have associated IP ranges, they are used to assign private IPs to the resources that are associated with the subnet.
+
+## VPC types
+
+·Default: Create a subnet in all GCP regions, create some firewalls
+
+·Auto Mode: Similar to the previous one but it is expandable to /16.
+
+·Custom Mode: Does not create subnets by default, you have full control of the IPs. Expandable to any size RFC 1918
+
+## Ilustration
+
+![image](https://user-images.githubusercontent.com/78567418/150156945-548fbeeb-2e20-4750-88cf-78ebfd05bd3b.png)
+
+## Subnet ranges
+
+When a subnet is created, its main range of IP addresses must be defined.
+
+The main internal addresses for resources (VM instances, internal load balancers, and internal protocol forwarding) are from the main range of the subnet.
+
+### Limitations
+
+·The main IP range of the subnet can be expanded, but not replaced or reduced, after the subnet has been created.
+
+·You can remove and replace a subnet's secondary IP address range only if no instances are using that range.
+
+·The minimum size of the primary or secondary range is eight IP addresses. Which means, the longest subnet mask you can use is /29.
+
+·Valid ranges can be found here.
+
+## VPC in action
+
+Recomendation: VPC default is not recommended in production because we have less control when the IP range is generated, which means we have less control over some of the traffic that is sent to endpoints with the same reference IP
+
+## Capacities 
+
+![image](https://user-images.githubusercontent.com/78567418/150158950-0b974f70-1805-48b6-928a-e04cfe2ccfc5.png)
+
+
+## About Cloud NAT
+
+It is a software-defined distributed managed service. It does not rely on proxy devices or virtual machines.
+
+Cloud NAT configures the Andromeda software that powers our VPC to provide source network address translation (source NAT, or SNAT) for virtual machines without external IP addresses. It also provides Destination Network Address Translation (Destination NAT or DNAT) for established incoming response packets.
+
+### Profits
+
+·Security: You can reduce the need for individual virtual machines so that each one has external IP addresses. Subject to outbound firewall rules, VMs without external IP addresses can access destinations on the Internet. For example, you might have virtual machines that only need Internet access to download updates or complete provisioning.
+
+·Availability: Cloud NAT is a software-defined distributed managed service. It is not dependent on any virtual machines in your project or a single physical gateway device. Configures a NAT gateway on a Cloud Router, which provides the control plane for NAT and contains configuration parameters that you specify. Google Cloud runs and maintains processes on the physical machines running your Google Cloud VMs.
+
+·Scalability: Cloud NAT can be configured to automatically scale the number of NAT IP addresses you use, and supports VMs that belong to managed instance groups, including those with autoscaling enabled.
+
+·Rendimiento: Cloud NAT no reduce el ancho de banda de la red por VM. Cloud NAT es implementado por la red definida por software Andromeda de Google.
+
+## Net services
+
+![image](https://user-images.githubusercontent.com/78567418/150170871-dfc18ca9-1b8c-4a42-a74a-cf144ffdf5fe.png)
+
