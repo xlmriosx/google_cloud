@@ -1127,3 +1127,48 @@ Centrelaize communicxation and simplify system
 
 ·Predefined and customizable machine types.
 
+![image](https://user-images.githubusercontent.com/78567418/150175075-7809a021-9a64-471f-963e-b064cc578448.png)
+
+## Family of Virtual Machines
+
+### General purpose
+
+#### Efficient E2
+
+·Cost optimization
+·Saving is a priority
+
+-Balanced N2, N2D
+
+·Balanced
+
+·Performance and TCO (Total Cost of Ownership)
+
+#### TAU T2D
+
+·Optimized for scalability
+
+·Performance high scalability
+
+### Optimized workloads
+
+#### C2
+
+·Computer optimization
+
+·Better CPU performance
+
+#### M1 M2
+·Optimization Memory
+
+·Greater memory
+
+#### A2
+
+·Optimization Acceleration
+
+·Highest Performance GPUs
+
+#### Customizable virtual machines
+
+·Create your own virtual machine configurations.
