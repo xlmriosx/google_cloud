@@ -972,44 +972,6 @@ When we import document this apper on Firestore Data.
 
 Google believes that in the future all companies regardless of their size or sector will differentiate themselves from their competitors through technology, mostly in the form of software. And the best software is all about data. Thus, each one will become a data company, if it is not already.
 
-# Project Google Photos
-
-Our Google Photos Clone project will have the 3 essential functionalities of this famous app:
-
-1. Store the photographs so that they are safeguarded.
-2. Recognize what is inside a photo.
-3. Being able to find photos through natural language searches.
-
-What I want to tell you with this is that if you take photos of anything with your cell phone, that photo will be saved in the cloud. And to find it, you just have to write in a search engine some word (s) that describe what is in the photo.
-
-To create this you will not need to code the application. The code, written in Python with Flask, I will share it with you within the classes in a GitHub repository. What we will do in this series of courses is to create the base infrastructure to run this app from the cloud with the essential characteristics mentioned.
-
-![image](https://user-images.githubusercontent.com/78567418/149415740-0c5fafb7-c687-4700-8aef-e03801f988a0.png)
-
-You can upload photos and save them in the cloud, so that later you can search for them with a single word in English using cloud storage technologies and artificial intelligence such as computer vision and natural language processing.
-
-![source](https://user-images.githubusercontent.com/78567418/149415908-5c70ca42-7334-4868-9dcb-a51f1c8c4fa7.gif)
-
-## First steps
-
-1. Go Console.
-2. Search Manager Resources.
-3. Create a project.
-4. Select Project.
-5. Go home.
-
-## Cloud storage
-
-1. Search Cloud Storage.
-2. Select Create bucket.
-3. In storage class select Standard.
-4. Go browser storage.
-5. Select bucket created.
-6. Go permissions.
-7. Delete public access.
-8. Create a user like all-user.
-9. Define to all-user permission to only read/view.
-
 # Virtual Private Cloud(VPC)
 
 It is a way of establishing connectivity between the resources we have in the cloud.
@@ -1150,6 +1112,8 @@ Centrelaize communicxation and simplify system
 
 ·Performance high scalability
 
+![image](https://user-images.githubusercontent.com/78567418/150177306-472bed02-dc01-4c32-97d0-686ab9580eec.png)
+
 ### Optimized workloads
 
 #### C2
@@ -1159,6 +1123,7 @@ Centrelaize communicxation and simplify system
 ·Better CPU performance
 
 #### M1 M2
+
 ·Optimization Memory
 
 ·Greater memory
@@ -1169,6 +1134,57 @@ Centrelaize communicxation and simplify system
 
 ·Highest Performance GPUs
 
+![image](https://user-images.githubusercontent.com/78567418/150177500-7aa12854-2e0f-4f4f-97ab-126eae22f07b.png)
+
 #### Customizable virtual machines
 
 ·Create your own virtual machine configurations.
+
+![image](https://user-images.githubusercontent.com/78567418/150177760-844ecb46-b5eb-49cd-88a5-4e2c8e2d27ba.png)
+
+
+# Project Google Photos
+
+Our Google Photos Clone project will have the 3 essential functionalities of this famous app:
+
+1. Store the photographs so that they are safeguarded.
+2. Recognize what is inside a photo.
+3. Being able to find photos through natural language searches.
+
+What I want to tell you with this is that if you take photos of anything with your cell phone, that photo will be saved in the cloud. And to find it, you just have to write in a search engine some word (s) that describe what is in the photo.
+
+To create this you will not need to code the application. The code, written in Python with Flask, I will share it with you within the classes in a GitHub repository. What we will do in this series of courses is to create the base infrastructure to run this app from the cloud with the essential characteristics mentioned.
+
+![image](https://user-images.githubusercontent.com/78567418/149415740-0c5fafb7-c687-4700-8aef-e03801f988a0.png)
+
+You can upload photos and save them in the cloud, so that later you can search for them with a single word in English using cloud storage technologies and artificial intelligence such as computer vision and natural language processing.
+
+![source](https://user-images.githubusercontent.com/78567418/149415908-5c70ca42-7334-4868-9dcb-a51f1c8c4fa7.gif)
+
+## First steps
+
+1. Go Console.
+2. Search Manager Resources.
+3. Create a project.
+4. Select Project.
+5. Go home.
+
+## Cloud storage
+
+1. Search Cloud Storage.
+2. Select Create bucket.
+3. In storage class select Standard.
+4. Go browser storage.
+5. Select bucket created.
+6. Go permissions.
+7. Delete public access.
+8. Create a user like all-user.
+9. Define to all-user permission to only read/view.
+
+## Cloud VM
+
+1. On console clone project `git clone https://github.com/jdaroesti/google-photos-clon.git`
+2. On ../app `gcloud config set project <id-project>`
+3. On console `gcloud builds submit --tag gcr.io/<id-project>/<name_app>`
+4. Agree IP.
+5. On container registry see app.
