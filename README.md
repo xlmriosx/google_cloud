@@ -1083,3 +1083,47 @@ Cloud NAT configures the Andromeda software that powers our VPC to provide sourc
 
 ![image](https://user-images.githubusercontent.com/78567418/150170871-dfc18ca9-1b8c-4a42-a74a-cf144ffdf5fe.png)
 
+## VPC peering 
+
+![image](https://user-images.githubusercontent.com/78567418/150173002-dcd2eb04-c238-4a52-9905-f55dbc6bde0f.png)
+
+## Shared VPC
+
+Centrelaize communicxation and simplify system
+
+![image](https://user-images.githubusercontent.com/78567418/150173178-3ff03929-c2c9-4a94-8eff-15b97ca3d60e.png)
+
+## Rules Firewall
+
+![image](https://user-images.githubusercontent.com/78567418/150173451-88117f69-e4c4-41ad-bdd5-aee4802f3d6b.png)
+
+### Rules implicite
+
+![image](https://user-images.githubusercontent.com/78567418/150173985-54982763-f32f-40f4-9bb1-ffac91c01e88.png)
+
+## Cloud Computing
+
+·Cloud computing services must be a service on demand / self-service, be able to enter a browser to the provider's page and consume the resources that are needed.
+
+·All access to cloud services must be through a network, usually the internet.
+
+·The cloud provider's physical services are shared among its customers.
+
+·The elasticity, to increase the computing capacity of the applications, is fast.
+
+·Payment is only for what is used.
+
+### Compute Engine (Infrastructure as a Service)
+
+·General purpose and optimized Virtual Machines (VMs).
+
+·Preemptible VMs (virtual machine on maximum 24 hours, can be turned off earlier, the advantage is that they generate significant cost savings).
+
+·Pay per second / Sustained usage discounts.
+
+·Live Migration.
+
+·Sizing Recommendations.
+
+·Predefined and customizable machine types.
+
